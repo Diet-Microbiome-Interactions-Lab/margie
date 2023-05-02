@@ -1,0 +1,30 @@
+analysis: 'Metagenomic'
+
+# Annotation Params
+contigs: "Fastas-Final"
+extension: "fasta"
+clean_contigs: "Fastas-Final-Clean"
+contigdb: "ContigDBs"
+
+# Alignment Params
+
+#assembly: "Assembly"
+# assembly_extension: "fasta"
+sequence_location: "test/input"
+sequence_extension: "fasta"
+
+
+clean_assembly: "Clean-Assembly"
+fastq: "fastq"
+fq_extension: "fastq.gz"
+
+# Profiling Params
+profiles: "ProfileDB-PU"
+
+# Tuning params
+threads: 80
+
+# Misc params
+log_id: "AnnotatingMAGs"
+
+
