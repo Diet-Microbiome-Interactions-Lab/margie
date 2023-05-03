@@ -1,5 +1,5 @@
 # 🌹🦠️🍄 margie 🍄🦠️🌹
-### Mostly Automated Genome Feature-Prediction Tool
+### Mostly Automated Rapid Genome Inference Environment
 
 _*Purpose*_: To rapidly annotate genomes in a scalable and confident manner using all of the latest tools and technologies.  
 
