@@ -1,0 +1,50 @@
+[project]
+name = "margie"
+description = "Mostly Automated Rapid Genome Inference Environment"
+version = "0.1.0"
+authors = ["ddeemer"]
+license = "MIT"
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+
+[dependencies]
+python = ">=3.9,<3.12"
+pydantic = ">=2.0"
+
+# Local bioinformatics tools library
+[pypi-dependencies]
+bioinformatics_tools = { path = "../GeneralTools", editable = true }
+
+# Bioinformatics tools for genome annotation
+biopython = ">=1.80"
+pandas = ">=1.5"
+numpy = ">=1.20"
+
+# Development and testing
+pytest = ">=7.0"
+pytest-cov = ">=4.0"
+black = ">=23.0"
+ruff = ">=0.1"
+mypy = ">=1.0"
+
+# Optional scientific computing
+scipy = ">=1.9"
+matplotlib = ">=3.5"
+seaborn = ">=0.11"
+
+[tasks]
+install = "pip install -e ."
+test = "pytest tests/ -v"
+test-cov = "pytest tests/ --cov=margie --cov-report=html"
+lint = "ruff check ."
+format = "black ."
+typecheck = "mypy ."
+clean = "rm -rf __pycache__ .pytest_cache .coverage htmlcov *.egg-info"
+
+[tasks.dev]
+cmd = "python database/fasta_to_sqlite.py"
+description = "Run the FASTA to SQLite converter"
+
+[tasks.setup-db]
+cmd = "mkdir -p database && echo 'Database directory ready'"
+description = "Set up database directory"
