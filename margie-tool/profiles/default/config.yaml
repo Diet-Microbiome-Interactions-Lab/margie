@@ -1,0 +1,10 @@
+set-threads:
+  example-rule: 4
+  another-rule: 8
+
+jobs: 1
+
+# Default configuration values for the workflow -- DO NOT TOUCH
+config:
+  output_dir: "output-from-default2"
+  input_fasta: "example.fasta"
