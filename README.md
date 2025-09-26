@@ -37,19 +37,22 @@ bioinformatics_tools = { path = "../GeneralTools", editable = true }`
    ```
 
 ### Testing our initial codebase is good
-Convert a FASTA file to SQLite database:
+Test to determine bioinformatics_tools imports properly
 ```bash
 # Basic usage
 python tests/test.py
 # Should see output: ✅ Tests passed successfully!
 ```
 
-***
-### Stages:
-### 1.) Input verification and validation  
-Pass
-### 2.) Genome cleaning and initial annotation  
-Pass
-### 3.) Annotation collapsing and decision making
-Pass
+### Margie Usage:
+```bash
+cd margie-tool
+python fasta.py -i raw-fastas/*.fasta
+# Should see output: ✅ Margie pipeline completed successfully!
+# This will also create: margie-tools/output/from-default2/example.db & example2.db
+```
+
+## TODO: 
+
+pass
 

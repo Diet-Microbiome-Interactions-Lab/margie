@@ -178,6 +178,7 @@ def main():
     archived_config = logs_dir / f"config_{timestamp}.json"
     temp_config_file.rename(archived_config)
     print(f'\nStep 9: Archived temporary config file to {archived_config}')
+    print(f'\n✅ Margie pipeline completed successfully!')
 
 if __name__ == '__main__':
     exit(main())
