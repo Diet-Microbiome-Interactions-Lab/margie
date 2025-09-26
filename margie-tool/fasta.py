@@ -12,7 +12,6 @@ from pydantic import BaseModel, Field
 import yaml
 
 from bioinformatics_tools.FileClasses.Fasta import Fasta
-from src.pipeline import run_make_db
 
 
 def get_fasta_files(inputs):
@@ -29,19 +28,6 @@ def get_fasta_files(inputs):
         else:
             print(f"Warning: Path '{input_path}' does not exist")
     return [str(f.absolute()) for f in fasta_files]
-
-
-
-
-
-# class SequenceRecord(BaseModel):
-#     """Pydantic model for a sequence record."""
-#     id: Optional[int] = None
-#     header: str = Field(..., min_length=1, description="Sequence header/identifier")
-#     sequence: str = Field(..., min_length=1, description="DNA/RNA/Protein sequence")
-#     length: int = Field(..., ge=0, description="Length of the sequence")
-#     gc_content: Optional[float] = Field(None, ge=0, le=100, description="GC content percentage")
-#     created_at: Optional[datetime] = None
 
 
 def main():

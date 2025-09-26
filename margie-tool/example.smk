@@ -36,4 +36,5 @@ rule make_db:
         echo "Sample: {wildcards.sample}" > {output.db_file}
         echo "Input FASTA: {input.fasta}" >> {output.db_file}
         echo "This is a sqlite3 db for {wildcards.sample}" >> {output.db_file}
+        """
     
